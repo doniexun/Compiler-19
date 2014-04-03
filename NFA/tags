@@ -1,0 +1,34 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CC	Makefile	/^CC=gcc$/;"	m
+ELEMENT_MAX_NUM	input_DFA.c	20;"	d	file:
+ELEMENT_MAX_NUM	input_NFA.c	19;"	d	file:
+EMPTY_STRING	input_NFA.c	16;"	d	file:
+Match_Ch	input_DFA.c	/^int Match_Ch(Node *my_node, int status_start, char ch)$/;"	f
+Match_String	input_DFA.c	/^int Match_String(Node *my_node, int status_start, char *string)$/;"	f
+Node	input_DFA.c	/^typedef struct node Node;$/;"	t	typeref:struct:node	file:
+Node	input_NFA.c	/^typedef struct node Node;$/;"	t	typeref:struct:node	file:
+OBJECT	Makefile	/^OBJECT=input_DFA input_NFA$/;"	m
+Print_Map	input_DFA.c	/^void Print_Map(Node *my_node)$/;"	f
+Print_Map	input_NFA.c	/^void Print_Map(Node *my_node)$/;"	f
+STATUS_MAX_NUM	input_DFA.c	19;"	d	file:
+STATUS_MAX_NUM	input_NFA.c	18;"	d	file:
+STRING_BUFFER_NUM	input_DFA.c	17;"	d	file:
+alphabet	input_DFA.c	/^char *alphabet;$/;"	v
+alphabet	input_NFA.c	/^char *alphabet;$/;"	v
+array	input_DFA.c	/^	int **array;			\/\/DFA的离开状态固定，但为了和NFA的数据结构兼容，这里用NFA的数据结构$/;"	m	struct:node	file:
+array	input_NFA.c	/^	int **array;$/;"	m	struct:node	file:
+element_num	input_DFA.c	/^int element_num;			\/\/词法基本元素总数$/;"	v
+element_num	input_NFA.c	/^int element_num;			\/\/词法基本元素总数, element_0代表空串,用宏定义EMPTY_STRING表示$/;"	v
+main	input_DFA.c	/^int main(int argc, char *argv[])$/;"	f
+main	input_NFA.c	/^int main(int argc, char *argv[])$/;"	f
+node	input_DFA.c	/^struct node		\/\/存储状态的数据结构$/;"	s	file:
+node	input_NFA.c	/^struct node		\/\/存储状态的数据结构$/;"	s	file:
+status_id	input_DFA.c	/^	int status_id;		\/\/状态标号$/;"	m	struct:node	file:
+status_id	input_NFA.c	/^	int status_id;		\/\/状态标号$/;"	m	struct:node	file:
+status_num	input_DFA.c	/^int status_num;				\/\/状态总数, status_0为开始状态start$/;"	v
+status_num	input_NFA.c	/^int status_num;				\/\/状态总数, status_0为开始状态start$/;"	v

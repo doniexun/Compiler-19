@@ -1,0 +1,15 @@
+
+Lex变量
+
+yyin		FIFE*类型，指向lexer正在解析的当前文件.
+yyout		FIFE*类型，指向记录lexer输出的位置。默认情况下，yyin指向stdin,yyout指向stdout。
+yytext		匹配模式的文本存储在该变量中(char *)。
+yyleng		yytext的长度
+yylineno	当前的行数
+
+LEX函数
+yylex()			从这一函数开始分析，由lex自动生成。
+yywrap()		这一函数在文件/输入的末尾调用。如果返回值为1，则停止解析。
+				因此可以用解析多个文件。当调用此函数时，重新设置yyin的指向，然后返回0。
+yyless(int n)   用来送回前n个字符以外的所有读出标记。
+yymore()		告诉Lexer将下一个标记附加到当前标记后面。

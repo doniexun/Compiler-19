@@ -1,0 +1,101 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Atom	parser.c	/^ExprNode* Atom()					\/\/递归下降分析-建立Atom表达式分析树$/;"	f
+BUFFER_NUM	lexical.c	18;"	d	file:
+CHAR_BUFFER	lexical.c	/^char CHAR_BUFFER[20] = {0}; \/\/用于输入字符的缓冲区$/;"	v
+CHAR_FLAG	lexical.c	/^int CHAR_FLAG = 0;			\/\/缓冲区索引$/;"	v
+COMMA	lexical.h	/^	SEMICO,L_BRACKET,R_BRACKET,COMMA,$/;"	e	enum:Token_Type
+CONST_ID	lexical.h	/^	CONST_ID,$/;"	e	enum:Token_Type
+CaseConst	parser.h	/^		double CaseConst;				\/\/常数,绑定右值,对应OpCode=CONST_ID$/;"	m	union:ExprNode::__anon1
+CaseFunc	parser.h	/^		} CaseFunc;						\/\/函数调用$/;"	m	union:ExprNode::__anon1	typeref:struct:ExprNode::__anon1::__anon3
+CaseFunc	parser.h	/^typedef struct CaseFunc CaseFunc;$/;"	t	typeref:struct:CaseFunc
+CaseOperator	parser.h	/^		} CaseOperator;					\/\/二元操作$/;"	m	union:ExprNode::__anon1	typeref:struct:ExprNode::__anon1::__anon2
+CaseOperator	parser.h	/^typedef struct CaseOperator CaseOperator;$/;"	t	typeref:struct:CaseOperator
+CaseParmPtr	parser.h	/^		double *CaseParmPtr;			\/\/参数T,绑定左值,OpCode=T, 参数T为全局变量，这里保存其地址$/;"	m	union:ExprNode::__anon1
+Close_Scanner	lexical.c	/^void Close_Scanner(void)$/;"	f
+Component	parser.c	/^ExprNode* Component()				\/\/递归下降分析-建立Component表达式分析树$/;"	f
+Content	parser.h	/^	} Content;$/;"	m	struct:ExprNode	typeref:union:ExprNode::__anon1
+Content	parser.h	/^typedef union Content Content;$/;"	t	typeref:union:Content
+DFA_STATE	lexical.c	/^int DFA_STATE = 0;	\/\/初始化状态为起始状态0;$/;"	v
+DIV	lexical.h	/^	PLUS,MINUS,MUL,DIV,POWER,$/;"	e	enum:Token_Type
+DRAW	lexical.h	/^	ORIGIN,SCALE,ROT,IS,TO,STEP,DRAW,FOR,FROM,$/;"	e	enum:Token_Type
+ERROR_ATOM	parser.c	25;"	d	file:
+ERROR_ERRTOKEN	parser.c	23;"	d	file:
+ERROR_MATCH	parser.c	24;"	d	file:
+ERROR_STATEMENT	parser.c	26;"	d	file:
+ERRTOKEN	lexical.h	/^	ERRTOKEN$/;"	e	enum:Token_Type
+EXIT_FAIL_OPEN	parser.c	18;"	d	file:
+EXIT_MALLOC	parser.c	17;"	d	file:
+EXIT_SYNTAX	parser.c	19;"	d	file:
+ExprNode	parser.h	/^struct ExprNode{				\/\/表达式的语法树$/;"	s
+ExprNode	parser.h	/^typedef struct ExprNode ExprNode;$/;"	t	typeref:struct:ExprNode
+Expression	parser.c	/^ExprNode* Expression()				\/\/递归下降分析-建立Expression表达式语法树$/;"	f
+FALSE	lexical.h	18;"	d
+FOR	lexical.h	/^	ORIGIN,SCALE,ROT,IS,TO,STEP,DRAW,FOR,FROM,$/;"	e	enum:Token_Type
+FP	lexical.c	/^FILE *FP = NULL; \/\/全局文件指针变量, 指向打开的文件.$/;"	v
+FROM	lexical.h	/^	ORIGIN,SCALE,ROT,IS,TO,STEP,DRAW,FOR,FROM,$/;"	e	enum:Token_Type
+FUNC	lexical.h	/^	FUNC,$/;"	e	enum:Token_Type
+Factor	parser.c	/^ExprNode* Factor()					\/\/递归下降分析-建立Factor表达式语法树$/;"	f
+Fetch_Token	parser.c	/^void Fetch_Token()	$/;"	f
+For_Statement	parser.c	/^void For_Statement()				\/\/递归下降分析-建立For_Statement语法分析树$/;"	f
+FuncPtr	lexical.h	/^	double		(* FuncPtr)(double);	\/\/属性,	若词法单元为函数则是函数指针$/;"	m	struct:Token
+FuncPtr	parser.h	/^typedef double (*FuncPtr)(double);\/\/定义一个返回值为double，参数为double的函数指针,用作存储sin等地址$/;"	t
+Get_Token	lexical.c	/^Token Get_Token(void)$/;"	f
+INDENT_NUM	parser.c	378;"	d	file:
+IS	lexical.h	/^	ORIGIN,SCALE,ROT,IS,TO,STEP,DRAW,FOR,FROM,$/;"	e	enum:Token_Type
+Init_Scanner	lexical.c	/^int Init_Scanner(const char* file_name)$/;"	f
+L_BRACKET	lexical.h	/^	SEMICO,L_BRACKET,R_BRACKET,COMMA,$/;"	e	enum:Token_Type
+MINUS	lexical.h	/^	PLUS,MINUS,MUL,DIV,POWER,$/;"	e	enum:Token_Type
+MUL	lexical.h	/^	PLUS,MINUS,MUL,DIV,POWER,$/;"	e	enum:Token_Type
+MakeExprNode	parser.c	/^ExprNode * MakeExprNode(Token_Type OpCode, void* arg1, void* arg2)$/;"	f
+Match_Token	parser.c	/^void Match_Token(Token_Type AToken)		$/;"	f
+MathFuncPtr	parser.h	/^			FuncPtr MathFuncPtr;		\/\/对应的数学调用函数:sin,cos...$/;"	m	struct:ExprNode::__anon1::__anon3
+NONTOKEN	lexical.h	/^	NONTOKEN,$/;"	e	enum:Token_Type
+Next_Char	lexical.c	/^char Next_Char() \/\/从文件中读取一个字符$/;"	f
+OBJECT	Makefile	/^OBJECT=$(T1)$/;"	m
+OBJECT	lex/Makefile	/^OBJECT=$(T1)$/;"	m
+ORIGIN	lexical.h	/^	ORIGIN,SCALE,ROT,IS,TO,STEP,DRAW,FOR,FROM,$/;"	e	enum:Token_Type
+OpCode	parser.h	/^	enum Token_Type OpCode;		\/\/关于表达式词法单元的种类:PLUS,MINUS,MUL,DIV,POWER,FUNC,CONST_ID,T$/;"	m	struct:ExprNode	typeref:enum:ExprNode::Token_Type
+Origin_Statement	parser.c	/^void Origin_Statement()				\/\/递归下降分析-建立Origin_Statement语法分析树$/;"	f
+PLUS	lexical.h	/^	PLUS,MINUS,MUL,DIV,POWER,$/;"	e	enum:Token_Type
+POINT_FLAG	lexical.c	/^int POINT_FLAG = 0;			\/\/小数点标记, 遇到小数点标记为1, 用于检测多小数点的错误$/;"	v
+POWER	lexical.h	/^	PLUS,MINUS,MUL,DIV,POWER,$/;"	e	enum:Token_Type
+Parser	parser.c	/^void Parser(char* SrcFilePtr)		\/\/对SrcFilePtr指针所指向的文件进行语法分析$/;"	f
+Print_Syntax_Tree	parser.c	/^void Print_Syntax_Tree(ExprNode *root, int indent)$/;"	f
+Program	parser.c	/^void Program()						\/\/递归下降分析-建立Program语法树$/;"	f
+ROT	lexical.h	/^	ORIGIN,SCALE,ROT,IS,TO,STEP,DRAW,FOR,FROM,$/;"	e	enum:Token_Type
+R_BRACKET	lexical.h	/^	SEMICO,L_BRACKET,R_BRACKET,COMMA,$/;"	e	enum:Token_Type
+Retract	lexical.c	/^int Retract() \/\/将文件指针FP回退一个位置,成功返回0，失败返回错误码-1.$/;"	f
+Rot_Statement	parser.c	/^void Rot_Statement()				\/\/递归下降分析-建立Rot_Statement语法分析树$/;"	f
+SCALE	lexical.h	/^	ORIGIN,SCALE,ROT,IS,TO,STEP,DRAW,FOR,FROM,$/;"	e	enum:Token_Type
+SEMICO	lexical.h	/^	SEMICO,L_BRACKET,R_BRACKET,COMMA,$/;"	e	enum:Token_Type
+STEP	lexical.h	/^	ORIGIN,SCALE,ROT,IS,TO,STEP,DRAW,FOR,FROM,$/;"	e	enum:Token_Type
+Scale_Statement	parser.c	/^void Scale_Statement()				\/\/递归下降分析-建立Scale_Statement语法分析树$/;"	f
+Statement	parser.c	/^void Statement()					\/\/递归下降分析-建立Statement语法树$/;"	f
+Syntax_Error	parser.c	/^void Syntax_Error(int erron)			$/;"	f
+T	lexical.h	/^	T,$/;"	e	enum:Token_Type
+T1	Makefile	/^T1=parser$/;"	m
+T1	lex/Makefile	/^T1=lex$/;"	m
+TO	lexical.h	/^	ORIGIN,SCALE,ROT,IS,TO,STEP,DRAW,FOR,FROM,$/;"	e	enum:Token_Type
+TRUE	lexical.h	17;"	d
+Term	parser.c	/^ExprNode* Term()					\/\/递归下降分析-建立Term表达式语法树$/;"	f
+Token	lexical.h	/^struct Token	\/\/词法单元的数据结构 <单元名，属性值>$/;"	s
+Token	lexical.h	/^typedef struct Token Token;$/;"	t	typeref:struct:Token
+Token_Table	lexical.c	/^Token Token_Table[] =			\/\/存放<静态>词法单元的数据结构$/;"	v
+Token_Type	lexical.h	/^enum Token_Type	\/\/词法单元的模式$/;"	g
+Token_Type	lexical.h	/^typedef enum Token_Type Token_Type;$/;"	t	typeref:enum:Token_Type
+__LEXICAL_H__	lexical.h	13;"	d
+__PARSE_H__	parser.h	12;"	d
+child	parser.h	/^			ExprNode *child;$/;"	m	struct:ExprNode::__anon1::__anon3
+left	parser.h	/^			ExprNode *left, *right;		\/\/二元操作树的左右子树$/;"	m	struct:ExprNode::__anon1::__anon2
+lexeme	lexical.h	/^	char*		lexeme;					\/\/属性, 原始输入的字符串$/;"	m	struct:Token
+main	main.c	/^int main(int argc, char *argv[])$/;"	f
+parment_t	parser.c	/^double parment_t = 0;			\/\/绘图语言唯一的一个变量,T$/;"	v
+right	parser.h	/^			ExprNode *left, *right;		\/\/二元操作树的左右子树$/;"	m	struct:ExprNode::__anon1::__anon2
+token	lexical.c	/^Token token = {};			\/\/全局变量token.$/;"	v
+type	lexical.h	/^	Token_Type	type;					\/\/词法单元的模式\/类别$/;"	m	struct:Token
+value	lexical.h	/^	double		value;					\/\/属性, 若词法单元为常数则是常数值$/;"	m	struct:Token

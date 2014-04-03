@@ -1,0 +1,33 @@
+yacc使用巴科斯范式(BNF, Backus Naur Form)来书写。按照惯例，Yacc 文件有 .y 后缀。
+
+两种语法冲突
+shift/reduce 移入/归约冲突
+reduce/reduce 归约/归约冲突
+
+
+
+1.编译步骤
+flex test.l
+yacc -d test.y
+gcc lex.yy.c y.tab.c -o test
+
+注意: test.y中必须提供yyerror() / main()否则报错
+In function `yyerror'
+undefined reference to `rpl_fprintf'
+
+void main()
+{
+	yyparse();
+}
+
+
+int yyerror(char const *message)
+{
+	fputs(message, stderr);
+	fputc('\n',stderr);
+	return 0;
+}
+
+
+test.l 中必须包含
+#include"y.tab.h"
